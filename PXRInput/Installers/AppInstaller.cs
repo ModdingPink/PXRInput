@@ -16,16 +16,6 @@ namespace PXRInput.Installers
         public override void InstallBindings()
         {
             Container.BindInterfacesAndSelfTo<InputManager>().AsSingle().NonLazy();
-
-
-            var loader = XRGeneralSettings.Instance.Manager.activeLoader;
-            if (loader != null)
-            {
-                //string managerName = XRGeneralSettings.Instance.Manager.activeLoader.name.ToLower().Replace(" ", "");
-                //if (managerName.Contains("openxr"))
-
-                Container.BindInterfacesAndSelfTo<VRInputGroup>().AsSingle().NonLazy();
-            }
         }
     }
 }
